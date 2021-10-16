@@ -1,15 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Animals
+﻿namespace Animals
 {
     public interface IAnimal
-    { 
+    {
+        /// <summary>
+        /// Указывает на то, может ли животное жить в воде
+        /// </summary>
         public bool WaterArea { get; set; }
+
+        /// <summary>
+        /// Указывает на возможный вес представителя этого типа животных
+        /// </summary>
         public int MiddleWeight { get; set; }
+
+        /// <summary>
+        /// Пример животного
+        /// </summary>
         public string Kingdom { get; set; }
 
         /// <summary>

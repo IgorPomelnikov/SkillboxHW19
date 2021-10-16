@@ -1,10 +1,6 @@
-﻿using System;
-using Animals;
+﻿using Animals;
+using System;
 using System.Reflection;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SkillboxHW19One
 {
@@ -12,7 +8,8 @@ namespace SkillboxHW19One
     {
         public static IAnimal GetAnimal(string Animal)
         {
-            //Читаем файл библиотеки, ищем там класс, соответствующий описанию, возвращаем
+            //Читаем файл библиотеки, ищем там класс, соответствующий описанию, возвращаем экземпляр класса
+
             Assembly assembly = Assembly.LoadFrom("Animals.dll");
             try
             {
@@ -22,8 +19,8 @@ namespace SkillboxHW19One
             {
                 return new NullAnimal();
             }
-            
+
         }
-       
+
     }
 }

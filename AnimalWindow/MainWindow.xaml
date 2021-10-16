@@ -5,12 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AnimalWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Skillbox Homework 19" Height="450" Width="800">
     <Grid>
         <Label Content="Введите название типа животного на английском (нпр, Birds)" HorizontalAlignment="Left" Height="58" Margin="10,10,0,0" VerticalAlignment="Top" Width="649" FontSize="22"/>
         <TextBox x:Name="InputText" HorizontalAlignment="Left" Height="47" Margin="10,73,0,0" VerticalAlignment="Top" Width="617"/>
-        <Button Content="OK" HorizontalAlignment="Left" Height="47" Margin="659,73,0,0" VerticalAlignment="Top" Width="109" Click="Button_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,154,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="119" Width="617"/>
+
+        <TextBlock x:Name="OutputText" HorizontalAlignment="Left" Margin="10,154,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="617"/>
+        <Button x:Name="okBtn" Content="Ok" HorizontalAlignment="Left" Margin="672,73,0,0" VerticalAlignment="Top" Height="43" Width="87"/>
+        <Button x:Name="btnTxt" Content="Сохранить в TXT" HorizontalAlignment="Left" Height="71" Margin="268,284,0,0" VerticalAlignment="Top" Width="133"/>
+        <Button x:Name="btnCsv" Content="Cохранить в CSV" HorizontalAlignment="Left" Height="71" Margin="406,284,0,0" VerticalAlignment="Top" Width="132"/>
 
     </Grid>
 </Window>

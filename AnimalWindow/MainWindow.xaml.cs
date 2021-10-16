@@ -1,18 +1,4 @@
-﻿using Animals;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace AnimalWindow
 {
@@ -21,22 +7,24 @@ namespace AnimalWindow
     /// </summary>
     public partial class MainWindow : Window, IViewer
     {
-        public IPresenter Presenter { get; set; }
-        public IAnimal Animal { get; set; }
+        public string Information { set => OutputText.Text = value; }
+
+        public string Request { get => InputText.Text; }
+
+        Presenter presenter;
 
         public MainWindow()
         {
             InitializeComponent();
+            presenter = new Presenter(this);
+            okBtn.Click += (s, e) => presenter.GetResult();
+            btnTxt.Click += (s, e) => presenter.SaveToTxt(InputText.Text, OutputText.Text);
+            btnCsv.Click += (s, e) => presenter.SaveToCsv(InputText.Text, OutputText.Text);
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    presenter.GetResult();
+        //}
     }
 }

@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Animals
+﻿namespace Animals
 {
-    public class Amphibians :IAnimal
+    public class Amphibians : IAnimal
     {
         public bool WaterArea { get; set; }
         public int MiddleWeight { get; set; }
