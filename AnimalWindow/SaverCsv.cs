@@ -29,7 +29,7 @@ namespace AnimalWindow
         public SaverCsv(string fileName, string content)
         {
             Content = content;
-            if (fileName is null && fileName == string.Empty) FileName = "EmptyRequest";
+            if (String.IsNullOrWhiteSpace(fileName)) FileName = "EmptyRequest";
             else FileName = fileName;
             Path = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
         }
